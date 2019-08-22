@@ -21,6 +21,9 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        return false;
+        StringBuilder reversedText =
+                new StringBuilder(text.replaceAll("\\W","")).reverse();
+        return text.replaceAll("\\W","")
+                .equalsIgnoreCase(reversedText.toString());
     }
 }
